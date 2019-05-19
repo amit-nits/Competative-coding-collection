@@ -25,7 +25,7 @@ void modify(int p, long new_val)  // update new_val at position p
         t[p] = new_val;
         for (; p > 1; p/= 2)
         {
-            t[p/2] = t[p] + t[p^1];
+            t[p/2] = min(t[p] , t[p^1]);
         }
     }
 
